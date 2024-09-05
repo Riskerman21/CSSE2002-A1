@@ -47,12 +47,7 @@ public class BasicInventory implements Inventory {
             throw new InvalidStockRequestException(
                     "Current inventory is not fancy enough. Please supply products one at a time.");
         } else {
-            switch (barcode) {
-                case Barcode.WOOL -> productList.add(new Wool(quality));
-                case Barcode.MILK -> productList.add(new Milk(quality));
-                case Barcode.EGG -> productList.add(new Egg(quality));
-                case Barcode.JAM -> productList.add(new Jam(quality));
-            }
+            addProduct(barcode, quality);
         }
     }
 
