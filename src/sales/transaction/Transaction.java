@@ -46,9 +46,9 @@ public class Transaction {
      */
     public List<Product> getPurchases() {
         if (isFinalised()) {
-            return new ArrayList<>(bought);
+            return bought;
         }
-        return (getAssociatedCustomer().getCart().getContents());
+        return getAssociatedCustomer().getCart().getContents();
     }
 
     /**
@@ -81,9 +81,8 @@ public class Transaction {
         if (!bought.isEmpty()) {
             bought.clear();
         }
-        System.out.println(getAssociatedCustomer().getCart().getContents() + "where?");
         bought.addAll(getAssociatedCustomer().getCart().getContents());
-        getAssociatedCustomer().getCart().setEmpty();
+        getAssociatedCustomer().getCart().getContents().clear();
     }
 
     /**

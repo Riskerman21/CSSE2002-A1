@@ -7,13 +7,13 @@ import farm.inventory.product.data.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
+import java.util.ListIterator;
 
 /**
  * A fancy inventory which stores products in stacks, enabling quantity information.
  */
 public class FancyInventory implements Inventory {
-    private Stack<Product> productList = new Stack<>();
+    private List<Product> productList = new ArrayList<>();
 
     /**
      * Adds a new product with corresponding barcode to the inventory.

@@ -72,7 +72,7 @@ public class TransactionManager {
         if (!hasOngoingTransaction()) {
             throw new FailedTransactionException();
         } else {
-            currentransaction.getAssociatedCustomer().getCart().addProduct(product);
+            currentransaction.getPurchases().add(product);
         }
     }
 

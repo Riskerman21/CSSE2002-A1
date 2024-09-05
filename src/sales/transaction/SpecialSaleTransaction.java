@@ -11,10 +11,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * A transaction type that builds on the functionality of a categorised transaction, allowing
- * store-wide discounts to be applied to all products of a nominated type.
- */
 public class SpecialSaleTransaction extends CategorisedTransaction {
 
     private Map<Barcode, Integer> discounts = new HashMap<>();

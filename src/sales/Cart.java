@@ -9,14 +9,12 @@ import java.util.List;
  * A shopping cart that stores the customer products until they check out.
  */
 public class Cart {
-    private List<Product> productList;
+    private List<Product> productList = new ArrayList<Product>();
 
     /**
      * constructor of the shopping cart
      */
-    public Cart() {
-        productList = new ArrayList<Product>();
-    }
+    public Cart() {}
 
     /**
      * Adds a given product to the shopping cart.
@@ -32,7 +30,7 @@ public class Cart {
      * @requires the returned list is a shallow copy and cannot modify the original cart
      */
     public List<Product> getContents() {
-        return new ArrayList<>(this.productList);
+        return productList;
     }
 
     /**
