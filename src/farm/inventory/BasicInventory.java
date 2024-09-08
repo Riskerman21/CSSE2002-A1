@@ -43,12 +43,8 @@ public class BasicInventory implements Inventory {
                            Quality quality,
                            int quantity)
             throws InvalidStockRequestException {
-        if (quantity != 1) {
-            throw new InvalidStockRequestException(
+        throw new InvalidStockRequestException(
                     "Current inventory is not fancy enough. Please supply products one at a time.");
-        } else {
-            addProduct(barcode, quality);
-        }
     }
 
     /**
